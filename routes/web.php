@@ -17,6 +17,7 @@ Route::get('/tasks/{task}', 'TasksController@show');
 Route::get('/', 'TasksController@welcome');
 Route::get('/about', 'TasksController@about');
 Route::get('/contact', 'TasksController@contact');
+Route::get('/posts', 'PostController@index');
 
 // Route::get('/', function (){
 // 	// $tasks = DB::table('tasks')->get();
