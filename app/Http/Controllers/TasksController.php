@@ -36,7 +36,7 @@ class TasksController extends Controller
 	// 	return view('tasks.show', compact('task'));
 	// }
 
-	public function show(Task $task)
+	public function show(Task $task) // Route model binding
 	{
 		return view('tasks.show', compact('task'));
 	}
