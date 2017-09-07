@@ -18,7 +18,9 @@ Route::get('/', 'TasksController@welcome');
 Route::get('/about', 'TasksController@about');
 Route::get('/contact', 'TasksController@contact');
 Route::get('/posts', 'PostController@index');
-Route::get('/posts/{post}', 'PostController@show');
+Route::get('/posts/create', 'PostController@create');
+Route::post('/posts', 'PostController@store');
+// Route::get('/posts/{post}', 'PostController@show');
 
 // Route::get('/', function (){
 // 	// $tasks = DB::table('tasks')->get();
