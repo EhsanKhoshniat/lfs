@@ -2,7 +2,7 @@
 
 @section ('content')
 <div class="col-sm-8 blog-main">
-  <h1>This is a post.</h1>
+  <h1>Create a Post</h1>
   <hr>
   <form method="POST" action="/posts">
   <div class="form-group">
