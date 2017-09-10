@@ -34,10 +34,7 @@ class PostController extends Controller
     	// // Save it to the database
      //    $post->save();
 
-        Post::create([
-            'title' => request('title'),
-            "body" => request('body')
-            ]);
+        Post::create(request(['title', 'body']));
 
     	// Redirect to some page
         return redirect('/posts');
