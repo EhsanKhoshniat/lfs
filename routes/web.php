@@ -19,7 +19,7 @@ Route::get('/about', 'TasksController@about');
 Route::get('/contact', 'TasksController@contact');
 Route::get('/posts', 'PostController@index');
 Route::get('/posts/create', 'PostController@create');
-Route::post('/posts', 'PostController@store');
+Route::post('/posts', 'PostController@store'); #using word "store" is a convention
 // Route::get('/posts/{post}', 'PostController@show');
 
 // Route::get('/', function (){
