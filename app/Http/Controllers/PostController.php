@@ -26,13 +26,18 @@ class PostController extends Controller
     {
     	// dd(request(['title', 'body']));  //return raw data 
     	// Create a new post using the request data
-        $post = new Post;
+     //    $post = new Post;
 
-        $post->title = request('title');
-        $post->body = request('body');
+     //    $post->title = request('title');
+     //    $post->body = request('body');
 
-    	// Save it to the database
-        $post->save();
+    	// // Save it to the database
+     //    $post->save();
+
+        Post::create([
+            'title' => request('title'),
+            "body" => request('body')
+            ]);
 
     	// Redirect to some page
         return redirect('/posts');
