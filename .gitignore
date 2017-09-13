@@ -15,4 +15,5 @@ public/js/bootstrap.min.js
 public/js/ie10-viewport-bug-workaround.js
 public/css/bootstrap.min.css
 public/css/blog.css
+package-lock.json
 
