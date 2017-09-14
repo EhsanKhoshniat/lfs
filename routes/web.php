@@ -22,6 +22,8 @@ Route::get('/posts/create', 'PostController@create');
 Route::post('/posts', 'PostController@store'); #using word "store" is a convention
 Route::get('/posts/{post}', 'PostController@show');
 
+Route::post('/posts/{post}/comments', 'CommentsController@store');
+
 // Route::get('/', function (){
 // 	// $tasks = DB::table('tasks')->get();
 // 	$tasks = DB::table('tasks')->get();
