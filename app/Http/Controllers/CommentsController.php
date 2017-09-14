@@ -16,9 +16,10 @@ class CommentsController extends Controller
     	// 	'post_id' => $post->id
     	// 	]);
 
+    	$this->validate(request(), ['body' => 'required|min:2']);
+
     // Elequent way:
     	$post->addComment(request('body'));
-
     	return back();
     }
 }
