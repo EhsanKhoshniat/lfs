@@ -44,11 +44,11 @@ class PostController extends Controller
             'body' => 'required',
             ]);
 
-        Post::create([
-            'title' => request('title'),
-            'body' => request('body'),
-            'user_id' => auth()->id()
-            ]);
+        auth()->user()->publish(
+            new Post(request(['title', 'body']))
+            );
+
+  
 
     	// Redirect to some page
         return redirect('/posts');
