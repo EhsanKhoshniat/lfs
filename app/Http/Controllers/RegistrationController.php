@@ -17,12 +17,16 @@ class RegistrationController extends Controller
     	//Validate the form
     	$this->validate(request(), [
     		'name' => 'required',
-    		'email' => 'required|email',
+    		'email' => 'required|unique:users|email',
     		'password' => 'required|confirmed'
     		]);
 
     	//Create and save the user
-    	$user = User::create(request(['name', 'email', 'password']));
+    	$user = User::create([ 
+        'name' => request('name'),
+        'email' => request('email'),
+        'password' => bcrypt(request('password'))
+        ]);
 
     	//Sign them up
     	auth()->login($user);
