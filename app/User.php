@@ -31,5 +31,17 @@ class User extends Authenticatable
     {
         return $this->hasMany(Post::class);
     }
+
+    public function publish(Post $post)
+    {
+        
+        $this->post()->save($post);
+        // USER ALREADY HAS A RELATION WIH POST SO THIS IS UNNECECERY
+        // Post::create([
+        //     'title' => request('title'),
+        //     'body' => request('body'),
+        //     'user_id' => auth()->id()
+        // ]);
+    }
     
 }
