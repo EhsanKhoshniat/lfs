@@ -14,10 +14,10 @@
 // use App\Task;  // import the Task class
 Route::get('/tasks', 'TasksController@index' );
 Route::get('/tasks/{task}', 'TasksController@show');
-Route::get('/', 'TasksController@welcome');
+// Route::get('/', 'TasksController@welcome');
 Route::get('/about', 'TasksController@about');
 Route::get('/contact', 'TasksController@contact');
-Route::get('/posts', 'PostController@index')->name('home');
+Route::get('/', 'PostController@index')->name('home');
 Route::get('/posts/create', 'PostController@create');
 Route::post('/posts', 'PostController@store'); #using word "store" is a convention
 Route::get('/posts/{post}', 'PostController@show');
