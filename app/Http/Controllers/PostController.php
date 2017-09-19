@@ -32,14 +32,11 @@ class PostController extends Controller
 
         // $posts = $posts->get();
 
-        //Temporary
-        $archives = Post::selectRaw('year(created_at) as year, monthname(created_at) as month, count(*) as Published')
-        ->groupBy('year','month')
-        ->get()
-        ->toArray();
+        //Temporary - It shoud be availble on every views and not just index
+        // $archives = Post::archives();
 
         // return $archives;
-        return view('posts.index', compact('posts', 'archives'));
+        return view('posts.index', compact('posts'));
     }
 
     public function show(Post $post)
