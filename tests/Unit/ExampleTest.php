@@ -15,6 +15,6 @@ class ExampleTest extends TestCase
      */
     public function testBasicTest()
     {
-        $this->assertTrue(true);
+        $this->get('/')->assertSee('The Laravel Blog');
     }
 }
