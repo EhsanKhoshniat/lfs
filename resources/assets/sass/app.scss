@@ -171,3 +171,15 @@ h6, .h6 {
     flex: 1 1 auto;
     padding: 1.25rem;
 }
+
+#flash-message{
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+  animation: flash-message 10s forwards;
+}
+@keyframes flash-message {
+    0%   {opacity: 1;}
+    100% {opacity: 0; display:none;}
+}
