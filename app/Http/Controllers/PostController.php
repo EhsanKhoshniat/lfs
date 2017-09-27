@@ -20,6 +20,8 @@ class PostController extends Controller
 
         // $posts = (new \App\Repositories\Posts)->all();
 
+        
+
         $posts = Post::latest()
         ->filter(request(['month', 'year']))
         ->get();
@@ -77,6 +79,6 @@ class PostController extends Controller
   
 
     	// Redirect to some page
-        return redirect('/posts');
+        return redirect('/');
     }
 }
