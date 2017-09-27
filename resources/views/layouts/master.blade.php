@@ -21,6 +21,11 @@
 
 @include ('layouts.nav')
 
+@if ($flash = session('message'))
+@include ('layouts.flash-message')
+@endif
+
+
   <div class="container">
       <div class="row">
             @yield ('content')
