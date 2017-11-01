@@ -33,6 +33,9 @@ Route::get('/login','SessionsController@create')->name('login');
 Route::post('/login', 'SessionsController@store');
 Route::get('/logout', 'SessionsController@destroy'); // Post request is better choice for this
 
+Route::get('/billing', 'BillingController@index');
+Route::post('/billing', 'BillingController@result');
+
 // Route::get('/', function (){
 // 	// $tasks = DB::table('tasks')->get();
 // 	$tasks = DB::table('tasks')->get();
